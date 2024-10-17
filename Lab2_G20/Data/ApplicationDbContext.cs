@@ -17,10 +17,10 @@ namespace Lab2_G20.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // Hårdkodad anslutningssträng med SQL Server-användarnamn och lösenord
-                var connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Lab2_G20;User ID=myusername;Password=mypassword;";
+                // Hårdkodad anslutningssträng för SQLite
+                var connectionString = "Data Source=Lab2_G20.db;";
 
-                optionsBuilder.UseSqlServer(connectionString, options => options.EnableRetryOnFailure());
+                optionsBuilder.UseSqlite(connectionString);
             }
         }
     }
