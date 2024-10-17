@@ -17,8 +17,10 @@ namespace Lab2_G20.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Lab2_G20;Trusted_Connection=True;MultipleActiveResultSets=true", options => options.EnableRetryOnFailure());
+                // Hårdkodad anslutningssträng med SQL Server-användarnamn och lösenord
+                var connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Lab2_G20;User ID=myusername;Password=mypassword;";
 
+                optionsBuilder.UseSqlServer(connectionString, options => options.EnableRetryOnFailure());
             }
         }
     }
