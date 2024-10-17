@@ -1,8 +1,42 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Farm Management - Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1 class="text-center">Farm Management Dashboard</h1>
+    <p class="text-center">Welcome to the farm management system. Use the buttons below to manage your crops, schedules, and more.</p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "PlantingSchedule")" class="btn btn-primary btn-block">Planting Schedule</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "HarvestTracking")" class="btn btn-success btn-block">Harvest Tracking</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "Notifications")" class="btn btn-warning btn-block">Notifications</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "GrowthHistory")" class="btn btn-info btn-block">Growth History</a>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <a href="@Url.Action("Index", "Farm")" class="btn btn-secondary btn-block">Manage Farm</a>
+        </div>
+        <div class="col-md-6">
+            <a href="@Url.Action("Index", "Settings")" class="btn btn-dark btn-block">Settings</a>
+        </div>
+    </div>
 </div>
+
+<style>
+    .container {
+        margin-top: 50px;
+    }
+    .btn-block {
+        padding: 20px;
+        font-size: 18px;
+    }
+</style>
