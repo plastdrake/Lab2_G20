@@ -17,7 +17,8 @@ namespace Lab2_G20.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=localdatabase.db");
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Lab2_G20;Trusted_Connection=True;MultipleActiveResultSets=true", options => options.EnableRetryOnFailure());
+
             }
         }
     }

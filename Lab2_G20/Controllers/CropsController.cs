@@ -14,6 +14,7 @@ namespace Lab2_G20.Controllers
             _context = context;
         }
 
+        // Test of database
         public IActionResult Index()
         {
             // Lägg till en ny gröda i databasen
