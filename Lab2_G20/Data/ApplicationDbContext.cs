@@ -1,5 +1,6 @@
 ﻿using Lab2_G20.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace Lab2_G20.Data
 {
@@ -10,17 +11,17 @@ namespace Lab2_G20.Data
         {
         }
 
-        public DbSet<Crop> Crops { get; set; } // DbSet för din Crop-modell
+        public DbSet<Crop> Crops { get; set; } // DbSet för Crop-modellen
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // Ange sökvägen till databasfilen i projektmappen
-                var projectPath = AppDomain.CurrentDomain.BaseDirectory; // Hämtar projektmappen
-                var databasePath = Path.Combine(projectPath, "Lab2_G20.db"); // Skapa en databasfil
+                // Ange sökvägen till SQLite-databasen
+                var projectPath = AppDomain.CurrentDomain.BaseDirectory;
+                var databasePath = Path.Combine(projectPath, "Lab2_G20.db"); // Skapa en SQLite-databasfil
 
-                optionsBuilder.UseSqlite($"Data Source={databasePath};"); // Anslutning till SQLite
+                optionsBuilder.UseSqlite($"Data Source={databasePath};"); // Använd SQLite
             }
         }
     }
