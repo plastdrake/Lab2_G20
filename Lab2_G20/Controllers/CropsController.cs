@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Lab2_G20.Controllers
 {
-    public class TestController : Controller
+    public class CropsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public TestController(ApplicationDbContext context)
+        public CropsController(ApplicationDbContext context)
         {
             _context = context;
         }
