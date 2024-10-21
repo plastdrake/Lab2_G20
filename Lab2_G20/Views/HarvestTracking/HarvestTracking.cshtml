@@ -1,0 +1,70 @@
+﻿@model Lab2_G20.Models.Crop
+@{
+    ViewData["Title"] = "Harvest Tracking";
+}
+
+<!-- Länka till Bootstrap CSS -->
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    <form id="plantingForm">
+        <div class="form-group">
+            <label for="cropName">Crop Name</label>
+            <input type="text" class="form-control" id="cropName" placeholder="Enter crop name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="plantingDate">Planting Date</label>
+            <input type="date" class="form-control" id="plantingDate" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Record Planting Date</button>
+    </form>
+
+    <hr />
+
+    <h2>Countdown to Harvest</h2>
+    <div id="countdown" class="alert alert-info" style="display:none;">
+        <p id="countdownMessage"></p>
+    </div>
+</div>
+
+<!-- Lägga till jQuery och Bootstrap JS -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#plantingForm').on('submit', function (e) {
+            e.preventDefault();
+
+            const cropName = $('#cropName').val();
+            const plantingDate = new Date($('#plantingDate').val());
+            const harvestDate = new Date(plantingDate);
+            harvestDate.setDate(harvestDate.getDate() + 90); // Antag att skörden är 90 dagar efter planteringen
+
+            const currentDate = new Date();
+            const timeDifference = harvestDate - currentDate;
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+            $('#countdownMessage').text(`The crop "${cropName}" will be harvested in ${daysRemaining} days.`);
+            $('#countdown').show();
+
+            // Skapa en funktion för att uppdatera nedräkningen
+            const countdownInterval = setInterval(function () {
+                const now = new Date();
+                const timeDiff = harvestDate - now;
+                const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+                if (daysLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    $('#countdownMessage').text(`The crop "${cropName}" is ready for harvest!`);
+                } else {
+                    $('#countdownMessage').text(`The crop "${cropName}" will be harvested in ${daysLeft} days.`);
+                }
+            }, 1000 * 60 * 60 * 24); // Uppdatera varje dag
+        });
+    });
+</script>

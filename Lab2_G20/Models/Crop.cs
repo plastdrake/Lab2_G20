@@ -9,5 +9,7 @@ namespace Lab2_G20.Models
         public string Name { get; set; }
         public DateTime PlantingDate { get; set; }
         public DateTime HarvestDate { get; set; }
+
+        public int DaysRemaining => (HarvestDate - DateTime.Now).Days;
     }
 }
