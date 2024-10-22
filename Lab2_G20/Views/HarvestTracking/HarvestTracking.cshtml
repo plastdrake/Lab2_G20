@@ -18,6 +18,7 @@
                 <th>Crop Type</th>
                 <th>Planting Date</th>
                 <th>Harvest Date</th>
+                <th>Days to Harvest</th> <!-- New column for days to harvest -->
                 <th>Actions</th>
             </tr>
         </thead>
@@ -28,6 +29,20 @@
                     <td>@crop.CropType</td>
                     <td>@crop.PlantingDate.ToShortDateString()</td>
                     <td>@crop.HarvestDate.ToShortDateString()</td>
+                    <td>
+                        @{
+                            // Calculate days to harvest
+                            var daysToHarvest = (crop.HarvestDate - DateTime.Now).Days;
+                        }
+                        @if (daysToHarvest >= 0)
+                        {
+                            @daysToHarvest
+                        }
+                        else
+                        {
+                            <span class="text-danger">Harvested</span> <!-- Optional: indicate that the crop has already been harvested -->
+                        }
+                    </td>
                     <td>
                         <a href="/Crop/Edit/@crop.Id" class="btn btn-primary btn-sm">Edit</a>
                         <a href="/Crop/Delete/@crop.Id" class="btn btn-danger btn-sm">Delete</a>
