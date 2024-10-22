@@ -21,28 +21,46 @@ namespace Lab2_G20.Controllers
         {
             // Hämta alla grödor från databasen
             var crops = await _context.Crops.ToListAsync();
+            // Hämta distinkta grödtyper från PlantingSchedules
+            var cropTypes = await _context.PlantingSchedules.Select(ps => ps.CropType).Distinct().ToListAsync();
+            ViewBag.CropTypes = cropTypes; // Skickar grödtyper till vyn
 
             return View(crops); // Skickar grödorna till vyn
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate, int daysToHarvest)
+        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate, DateTime harvestDate)
         {
             if (ModelState.IsValid)
             {
                 var crop = new Crop
                 {
                     CropType = cropType,
-                    PlantingDate = plantingDate
+                    PlantingDate = plantingDate,
+                    HarvestDate = harvestDate
                 };
-                crop.SetHarvestDate(daysToHarvest);
 
                 // Lägg till grödan i databasen
                 _context.Crops.Add(crop);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction("HarvestTracking");
             }
+
             return View();
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> GetDaysToHarvest(string cropType)
+        {
+            var plantingSchedule = await _context.PlantingSchedules
+                .FirstOrDefaultAsync(ps => ps.CropType == cropType);
+
+            if (plantingSchedule != null)
+            {
+                return Json(new { daysToHarvest = plantingSchedule.DaysToHarvest });
+            }
+            return Json(new { daysToHarvest = 0 });
         }
     }
 }
