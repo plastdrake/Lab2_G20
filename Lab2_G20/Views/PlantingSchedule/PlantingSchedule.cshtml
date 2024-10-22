@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Lab2_G20.Models.PlantingSchedule>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planting Schedule</title>
+</head>
+<body>
+    <h1>Planting Schedule</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Crop Type</th>
+                <th>Planting Date</th>
+                <th>Optimal Planting Date</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var schedule in Model) // Iterate over each PlantingSchedule
+            {
+                <tr>
+                    <td>@schedule.CropType</td> <!-- Access CropType property -->
+                    <td>@schedule.PlantingDate.ToShortDateString()</td> <!-- Display Planting Date -->
+                    <td>@schedule.OptimalPlantingDate?.ToShortDateString()</td> <!-- Optional date -->
+                    <td>@schedule.Notes</td> <!-- Display Notes -->
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
