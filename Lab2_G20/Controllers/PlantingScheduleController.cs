@@ -16,7 +16,7 @@ namespace Lab2_G20.Controllers
         }
 
         // GET: PlantingSchedule
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> PlantingSchedule()
         {
             var schedules = await _context.PlantingSchedules.ToListAsync(); // Ensure the using directive for EF Core
             return View(schedules);
