@@ -2,32 +2,41 @@
     ViewData["Title"] = "Farm Management - Home";
 }
 
+<!-- Main Menu -->
 <div class="container">
     <h1 class="text-center">Farm Management Dashboard</h1>
     <p class="text-center">Welcome to the farm management system. Use the buttons below to manage your crops, schedules, and more.</p>
 
-    <div class="row">
+    <div class="row mb-4 d-flex align-items-stretch">
         <div class="col-md-3">
-            <a href="@Url.Action("PlantingSchedule", "PlantingSchedule")" class="btn btn-primary btn-block">Planting Schedule</a>
+            <a href="@Url.Action("PlantingSchedule", "PlantingSchedule")" class="btn btn-primary btn-lg w-100 h-100">Planting Schedule</a>
         </div>
         <div class="col-md-3">
-            <a href="@Url.Action("HarvestTracking", "HarvestTracking")" class="btn btn-success btn-block">Harvest Tracking</a>
+            <a href="@Url.Action("HarvestTracking", "HarvestTracking")" class="btn btn-success btn-lg w-100 h-100">Harvest Tracking</a>
         </div>
         <div class="col-md-3">
-            <a href="@Url.Action("Index", "Notifications")" class="btn btn-warning btn-block">Notifications</a>
+            <a href="@Url.Action("Index", "Notifications")" class="btn btn-warning btn-lg w-100 h-100">Notifications</a>
         </div>
         <div class="col-md-3">
-            <a href="@Url.Action("Index", "Growth")" class="btn btn-info btn-block">Growth History</a>
+            <a href="@Url.Action("Index", "Growth")" class="btn btn-info btn-lg w-100 h-100">Growth History</a>
         </div>
     </div>
 </div>
 
-<style>
-    .container {
-        margin-top: 100px;
-    }
-    .btn-block {
-        padding: 20px;
-        font-size: 18px;
-    }
-</style>
+<br>
+
+<!-- Weather Widget -->
+<div class="card text-center">
+    <div class="card-body">
+        @if (ViewBag.Weather != null)
+        {
+            <h2 class="card-title">@ViewBag.Weather.Name</h2>
+            <h5 class="card-subtitle mb-2 text-muted">Current Weather</h5>
+            <p class="card-text display-4">@ViewBag.Weather.Main.Temp &deg;C</p>
+        }
+        else
+        {
+            <p class="text-danger">Weather data is not available.</p>
+        }
+    </div>
+</div>

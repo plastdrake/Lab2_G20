@@ -1,20 +1,26 @@
 using Lab2_G20.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Lab2_G20.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly WeatherService _weatherService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, WeatherService weatherService)
         {
             _logger = logger;
+            _weatherService = weatherService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var weatherData = await _weatherService.GetWeatherDataAsync(); // Fetch weather data
+            ViewBag.Weather = weatherData; // Store it in ViewBag
             return View();
         }
 
