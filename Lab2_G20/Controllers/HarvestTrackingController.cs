@@ -22,26 +22,62 @@ namespace Lab2_G20.Controllers
             // Hämta alla grödor från databasen
             var crops = await _context.Crops.ToListAsync();
 
-            return View(crops); // Skickar grödorna till vyn
+            // Hämta alla CropTypes från PlantingSchedules-tabellen
+            var cropTypes = await _context.PlantingSchedules
+                                           .Select(ps => ps.CropType)
+                                           .Distinct()
+                                           .ToListAsync();
+
+            // Skapa ett view model som innehåller både crops och cropTypes
+            var model = new HarvestTrackingViewModel
+            {
+                Crops = crops,
+                CropTypes = cropTypes
+            };
+
+            return View(model); // Skickar modellen till vyn
         }
 
+        public async Task<IActionResult> GetDaysToHarvest(string cropType)
+        {
+            if (string.IsNullOrEmpty(cropType))
+            {
+                return BadRequest("CropType is required");
+            }
+
+            // Hämta DaysToHarvest från PlantingSchedules-tabellen
+            var plantingSchedule = await _context.PlantingSchedules
+                .FirstOrDefaultAsync(ps => ps.CropType == cropType);
+
+            if (plantingSchedule == null)
+            {
+                return NotFound("CropType not found");
+            }
+
+            // Returnera DaysToHarvest som JSON
+            return Json(new { daysToHarvest = plantingSchedule.DaysToHarvest });
+        }
+
+
         [HttpPost]
-        public async Task<IActionResult> AddCrop(string name, DateTime plantingDate, int daysToHarvest)
+        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate, DateTime harvestDate)
         {
             if (ModelState.IsValid)
             {
                 var crop = new Crop
                 {
-                    Name = name,
-                    PlantingDate = plantingDate
+                    CropType = cropType,
+                    PlantingDate = plantingDate,
+                    HarvestDate = harvestDate
                 };
-                crop.SetHarvestDate(daysToHarvest);
 
                 // Lägg till grödan i databasen
                 _context.Crops.Add(crop);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction("HarvestTracking");
             }
+
             return View();
         }
     }

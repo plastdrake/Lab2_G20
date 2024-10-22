@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Lab2_G20.Models.Crop>
+
 @{
     ViewData["Title"] = "Harvest Tracking";
 }
@@ -14,7 +15,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Crop Name</th>
+                <th>Crop Type</th>
                 <th>Planting Date</th>
                 <th>Harvest Date</th>
                 <th>Actions</th>
@@ -24,7 +25,7 @@
             @foreach (var crop in Model)
             {
                 <tr>
-                    <td>@crop.Name</td>
+                    <td>@crop.CropType</td>
                     <td>@crop.PlantingDate.ToShortDateString()</td>
                     <td>@crop.HarvestDate.ToShortDateString()</td>
                     <td>
@@ -39,24 +40,59 @@
     <!-- Formulär för att lägga till nya grödor -->
     <form id="plantingForm" method="post" asp-action="AddCrop">
         <div class="form-group">
-            <label for="Name">Crop Name</label>
-            <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter crop name" required />
+            <label for="CropType">Crop Type</label>
+            <select class="form-control" id="CropType" name="CropType" required onchange="updateHarvestDate()">
+                <option value="" disabled selected>Select a crop type</option>
+                @foreach (var cropType in ViewBag.CropTypes)
+                {
+                    <option value="@cropType">@cropType</option>
+                }
+            </select>
         </div>
 
         <div class="form-group">
-            <label for="plantingDate">Planting Date</label>
-            <input type="date" class="form-control" id="plantingDate" name="PlantingDate" required />
+            <label for="PlantingDate">Planting Date</label>
+            <input type="date" class="form-control" id="PlantingDate" name="PlantingDate" required onchange="updateHarvestDate()" />
         </div>
 
         <div class="form-group">
-            <label for="daysToHarvest">Days to Harvest</label>
-            <input type="number" class="form-control" id="daysToHarvest" name="DaysToHarvest" placeholder="Enter days to harvest" required />
+            <label for="HarvestDate">Harvest Date</label>
+            <input type="text" class="form-control" id="HarvestDate" name="HarvestDate" readonly />
         </div>
+
         <br>
         <button type="submit" class="btn btn-primary">Record Planting Date</button>
     </form>
 </div>
 
-<!-- Lägga till jQuery och Bootstrap JS -->
+<!-- Lägg till jQuery och Bootstrap JS -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function updateHarvestDate() {
+        var cropType = $('#CropType').val();
+        var plantingDate = $('#PlantingDate').val();
+
+        if (cropType && plantingDate) {
+            $.ajax({
+                url: '@Url.Action("GetDaysToHarvest", "HarvestTracking")', // AJAX till controllern
+                type: 'GET',
+                data: { cropType: cropType },
+                success: function (data) {
+                    if (data.daysToHarvest) {
+                        var plantingDateObj = new Date(plantingDate);
+                        plantingDateObj.setDate(plantingDateObj.getDate() + data.daysToHarvest);
+
+                        // Formatera datumet (yyyy-mm-dd)
+                        var harvestDateStr = plantingDateObj.toISOString().split('T')[0];
+                        $('#HarvestDate').val(harvestDateStr); // Uppdatera HarvestDate i formuläret
+                    }
+                },
+                error: function () {
+                    alert('Error fetching DaysToHarvest.');
+                }
+            });
+        }
+    }
+</script>
