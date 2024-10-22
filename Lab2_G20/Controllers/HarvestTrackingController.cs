@@ -26,13 +26,13 @@ namespace Lab2_G20.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCrop(string name, DateTime plantingDate, int daysToHarvest)
+        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate, int daysToHarvest)
         {
             if (ModelState.IsValid)
             {
                 var crop = new Crop
                 {
-                    Name = name,
+                    CropType = cropType,
                     PlantingDate = plantingDate
                 };
                 crop.SetHarvestDate(daysToHarvest);

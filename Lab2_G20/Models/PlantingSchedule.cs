@@ -24,5 +24,6 @@ namespace Lab2_G20.Models
         public string Notes { get; set; }
 
         public int ReminderDaysBefore { get; set; }
+        public DateTime DaysToHarvest { get; set; }
     }
 }
