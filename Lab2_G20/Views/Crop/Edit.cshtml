@@ -13,26 +13,16 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="PlantingDate" class="control-label"></label>
                 <input asp-for="PlantingDate" class="form-control" />
                 <span asp-validation-for="PlantingDate" class="text-danger"></span>
             </div>
-
-            <!-- Lägger till HarvestDate-fältet -->
-            <div class="form-group">
-                <label asp-for="HarvestDate" class="control-label"></label>
-                <input asp-for="HarvestDate" type="date" class="form-control" />
-                <span asp-validation-for="HarvestDate" class="text-danger"></span>
-            </div>
-
             <br>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" /> |
@@ -43,7 +33,5 @@
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
