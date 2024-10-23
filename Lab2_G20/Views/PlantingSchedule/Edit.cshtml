@@ -1,0 +1,49 @@
+﻿@model Lab2_G20.Models.PlantingSchedule
+
+@{
+    ViewData["Title"] = "Edit Planting Schedule";
+}
+
+<h2>Edit Planting Schedule</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Crop"></label>
+        <input asp-for="Crop" class="form-control" />
+        <span asp-validation-for="Crop" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PlantingDate"></label>
+        <input asp-for="PlantingDate" class="form-control" type="date" />
+        <span asp-validation-for="PlantingDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReminderDaysBefore"></label>
+        <input asp-for="ReminderDaysBefore" class="form-control" type="number" />
+        <span asp-validation-for="ReminderDaysBefore" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DaysToHarvest"></label>
+        <input asp-for="DaysToHarvest" class="form-control" type="number" />
+        <span asp-validation-for="DaysToHarvest" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Notes"></label>
+        <input asp-for="Notes" class="form-control" />
+        <span asp-validation-for="Notes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a asp-action="PlantingSchedule" class="btn btn-secondary">Back to List</a>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

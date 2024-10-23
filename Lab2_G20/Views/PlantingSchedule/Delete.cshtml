@@ -1,0 +1,25 @@
+﻿@model Lab2_G20.Models.PlantingSchedule
+
+@{
+    ViewData["Title"] = "Delete Planting Schedule";
+}
+
+<h2>Delete Planting Schedule</h2>
+
+<div>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <strong>Crop:</strong> @Model.Crop <br />
+        <strong>Planting Date:</strong> @Model.PlantingDate <br />
+        <strong>Optimal Planting Date:</strong> @Model.OptimalPlantingDate <br />
+        <strong>Reminder Days Before:</strong> @Model.ReminderDaysBefore <br />
+        <strong>Days To Harvest:</strong> @Model.DaysToHarvest <br />
+        <strong>Notes:</strong> @Model.Notes
+    </div>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="PlantingSchedule" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
