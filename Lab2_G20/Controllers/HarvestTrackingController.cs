@@ -29,26 +29,66 @@ namespace Lab2_G20.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate, DateTime harvestDate)
+        public async Task<IActionResult> AddCrop(string cropType, DateTime plantingDate)
         {
+            // Log input values for debugging
+            Console.WriteLine($"CropType: {cropType}, PlantingDate: {plantingDate}");
+
+            // Check if the cropType is not empty
+            if (string.IsNullOrWhiteSpace(cropType))
+            {
+                ModelState.AddModelError("CropType", "Crop Type is required.");
+            }
+
+            // Check if plantingDate is valid
+            if (plantingDate == default)
+            {
+                ModelState.AddModelError("PlantingDate", "Planting Date is required.");
+            }
+
             if (ModelState.IsValid)
             {
-                var crop = new Crop
+                // Fetch the DaysToHarvest from the PlantingSchedule table
+                var plantingSchedule = await _context.PlantingSchedules
+                    .FirstOrDefaultAsync(ps => ps.Crop == cropType);
+
+                if (plantingSchedule != null)
                 {
-                    CropType = cropType,
-                    PlantingDate = plantingDate,
-                    HarvestDate = harvestDate
-                };
+                    // Calculate HarvestDate based on DaysToHarvest
+                    DateTime harvestDate = plantingDate.AddDays(plantingSchedule.DaysToHarvest);
 
-                // Lägg till grödan i databasen
-                _context.Crops.Add(crop);
-                await _context.SaveChangesAsync();
+                    var crop = new Crop
+                    {
+                        CropType = cropType,
+                        PlantingDate = plantingDate,
+                        HarvestDate = harvestDate
+                    };
 
-                return RedirectToAction("HarvestTracking");
+                    _context.Crops.Add(crop);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction("HarvestTracking");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "The selected crop type does not exist in the planting schedule.");
+                }
+            }
+            else
+            {
+                // Log model state errors
+                foreach (var error in ModelState)
+                {
+                    foreach (var subError in error.Value.Errors)
+                    {
+                        Console.WriteLine($"Error in {error.Key}: {subError.ErrorMessage}");
+                    }
+                }
             }
 
             return View();
         }
+
 
         [HttpGet]
         public async Task<JsonResult> GetDaysToHarvest(string crop)

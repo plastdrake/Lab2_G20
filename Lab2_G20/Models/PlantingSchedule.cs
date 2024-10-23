@@ -3,11 +3,11 @@
     public class PlantingSchedule
     {
         public int Id { get; set; }  // Primary key
-        public string Crop { get; set; } // Crop type
-        public string PlannedPlantingDate { get; set; }  // Date of planting
-        public string OptimalPlantingDate { get; set; }  // Calculated optimal planting date
+        public string? Crop { get; set; } // Crop type
+        public DateTime? PlannedPlantingDate { get; set; }  // Date of planting
+        public string? OptimalPlantingDate { get; set; }  // Calculated optimal planting date
         public int ReminderDaysBefore { get; set; }  // Days before planting to send reminders
         public int DaysToHarvest { get; set; }  // Number of days till harvest
-        public string Notes { get; set; }  // Any additional notes about the crop
+        public string? Notes { get; set; }  // Any additional notes about the crop
     }
 }

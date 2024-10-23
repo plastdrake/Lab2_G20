@@ -27,32 +27,39 @@ namespace Lab2_G20.Controllers
 
         // POST: Add a new planting schedule
         [HttpPost]
-        public async Task<IActionResult> AddPlantingSchedule(string crop, DateTime plantingDate, int reminderDaysBefore, int daysToHarvest, string optimalPlantingDate, string notes)
+        public async Task<IActionResult> AddPlantingSchedule(string crop, DateTime plannedPlantingDate, int reminderDaysBefore, int daysToHarvest, string? optimalPlantingDate, string notes)
         {
             if (ModelState.IsValid)
             {
                 var plantingSchedule = new PlantingSchedule
                 {
                     Crop = crop,
-                    PlannedPlantingDate = plantingDate.ToString("yyyy-MM-dd"),
+                    PlannedPlantingDate = plannedPlantingDate,
                     ReminderDaysBefore = reminderDaysBefore,
                     DaysToHarvest = daysToHarvest,
                     Notes = notes,
-                    OptimalPlantingDate = optimalPlantingDate // Store the optimal planting date passed from the form
+                    OptimalPlantingDate = optimalPlantingDate
                 };
 
-                // Add the new planting schedule to the database
-                _context.PlantingSchedules.Add(plantingSchedule);
-                await _context.SaveChangesAsync();
-
-                // Redirect back to the main schedule page after successful creation
-                return RedirectToAction("PlantingSchedule");
+                try
+                {
+                    _context.PlantingSchedules.Add(plantingSchedule);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("PlantingSchedule");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                }
             }
 
-            // If ModelState is not valid, return the same PlantingSchedule view but pass the current schedules
+            // Return the same view if ModelState is invalid
             var plantingSchedules = await _context.PlantingSchedules.ToListAsync();
             return View("PlantingSchedule", plantingSchedules);
         }
+
+
 
         // AJAX: Get the optimal planting date for a specific crop
         [HttpGet]
@@ -78,7 +85,7 @@ namespace Lab2_G20.Controllers
                 return NotFound();
             }
 
-            // Return the view for editing the schedule (you'll need to create an Edit view)
+            // Return the view for editing the schedule
             return View(plantingSchedule);
         }
 

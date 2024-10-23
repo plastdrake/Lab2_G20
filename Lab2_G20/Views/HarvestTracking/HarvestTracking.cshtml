@@ -4,13 +4,11 @@
     ViewData["Title"] = "Harvest Tracking";
 }
 
-<!-- Länka till Bootstrap CSS -->
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 
 <div class="container mt-5">
     <h1>@ViewData["Title"]</h1>
 
-    <!-- Tabell över planterade grödor -->
     <h2>Planted Crops</h2>
     <table class="table table-striped">
         <thead>
@@ -18,7 +16,7 @@
                 <th>Crop Type</th>
                 <th>Planting Date</th>
                 <th>Harvest Date</th>
-                <th>Days to Harvest</th> <!-- New column for days to harvest -->
+                <th>Days to Harvest</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -31,7 +29,6 @@
                     <td>@crop.HarvestDate.ToShortDateString()</td>
                     <td>
                         @{
-                            // Calculate days to harvest
                             var daysToHarvest = (crop.HarvestDate - DateTime.Now).Days;
                         }
                         @if (daysToHarvest >= 0)
@@ -40,7 +37,7 @@
                         }
                         else
                         {
-                            <span class="text-danger">Harvested</span> <!-- Optional: indicate that the crop has already been harvested -->
+                            <span class="text-danger">Harvested</span>
                         }
                     </td>
                     <td>
@@ -52,11 +49,12 @@
         </tbody>
     </table>
 
-    <!-- Formulär för att lägga till nya grödor -->
-    <form id="plantingForm" method="post" asp-action="AddCrop">
+    <!-- Inline Form for Adding New Crops -->
+    <h2>Add New Crop</h2>
+    <form method="post" asp-action="AddCrop">
         <div class="form-group">
             <label for="CropType">Crop Type</label>
-            <select class="form-control" id="CropType" name="CropType" required onchange="updateHarvestDate()">
+            <select class="form-control" id="CropType" name="CropType" required>
                 <option value="" disabled selected>Select a crop type</option>
                 @foreach (var cropType in ViewBag.CropTypes)
                 {
@@ -64,23 +62,18 @@
                 }
             </select>
         </div>
-
         <div class="form-group">
             <label for="PlantingDate">Planting Date</label>
             <input type="date" class="form-control" id="PlantingDate" name="PlantingDate" required onchange="updateHarvestDate()" />
         </div>
-
         <div class="form-group">
             <label for="HarvestDate">Harvest Date</label>
             <input type="text" class="form-control" id="HarvestDate" name="HarvestDate" readonly />
         </div>
-
-        <br>
         <button type="submit" class="btn btn-primary">Record Planting Date</button>
     </form>
 </div>
 
-<!-- Lägg till jQuery och Bootstrap JS -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -91,17 +84,15 @@
 
         if (cropType && plantingDate) {
             $.ajax({
-                url: '@Url.Action("GetDaysToHarvest", "HarvestTracking")', // AJAX till controllern
+                url: '@Url.Action("GetDaysToHarvest", "HarvestTracking")',
                 type: 'GET',
                 data: { cropType: cropType },
                 success: function (data) {
                     if (data.daysToHarvest) {
                         var plantingDateObj = new Date(plantingDate);
                         plantingDateObj.setDate(plantingDateObj.getDate() + data.daysToHarvest);
-
-                        // Formatera datumet (yyyy-mm-dd)
                         var harvestDateStr = plantingDateObj.toISOString().split('T')[0];
-                        $('#HarvestDate').val(harvestDateStr); // Uppdatera HarvestDate i formuläret
+                        $('#HarvestDate').val(harvestDateStr);
                     }
                 },
                 error: function () {
