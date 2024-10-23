@@ -1,0 +1,19 @@
+﻿@model Lab2_G20.Models.PlantingSchedule
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Planting Schedule Details</h2>
+
+<div>
+    <strong>Crop:</strong> @Model.Crop <br />
+    <strong>Planting Date:</strong> @Model.PlantingDate <br />
+    <strong>Optimal Planting Date:</strong> @Model.OptimalPlantingDate <br />
+    <strong>Reminder Days Before:</strong> @Model.ReminderDaysBefore <br />
+    <strong>Days To Harvest:</strong> @Model.DaysToHarvest <br />
+    <strong>Notes:</strong> @Model.Notes
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="PlantingSchedule" class="btn btn-secondary">Back to List</a>

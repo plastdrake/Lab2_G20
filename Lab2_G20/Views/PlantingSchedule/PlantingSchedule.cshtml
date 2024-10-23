@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PlantingDate">Planting Date</label>
+            <label for="PlantingDate">Planned Planting Date</label>
             <input type="date" class="form-control" id="PlantingDate" name="PlantingDate" required onchange="updateOptimalPlantingDate()" />
         </div>
 
@@ -61,14 +61,12 @@
         </div>
 
         <div class="form-group">
-            <label for="DaysToHarvest">Days To Harvest</label>
-            <input type="number" class="form-control" id="DaysToHarvest" name="DaysToHarvest" required />
+            <label for="Notes">Notes</label>
+            <input type="text" class="form-control" id="Notes" name="Notes" />
         </div>
 
-        <div class="form-group">
-            <label for="Notes">Notes</label>
-            <input type="text" class="form-control" id="Notes" name="Notes"/>
-        </div>
+        <!-- Hidden field to hold Optimal Planting Date (calculated via AJAX) -->
+        <input type="hidden" id="OptimalPlantingDate" name="OptimalPlantingDate" />
 
         <br>
         <button type="submit" class="btn btn-primary">Add Planting Schedule</button>
@@ -92,7 +90,7 @@
                 data: { crop: cropType },
                 success: function (data) {
                     if (data.optimalPlantingDate) {
-                        $('#OptimalPlantingDate').val(data.optimalPlantingDate); // Update optimal planting date field
+                        $('#OptimalPlantingDate').val(data.optimalPlantingDate); // Store the result in the hidden field
                     }
                 },
                 error: function () {
