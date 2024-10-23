@@ -34,7 +34,7 @@ namespace Lab2_G20.Controllers
                 var plantingSchedule = new PlantingSchedule
                 {
                     Crop = crop,
-                    PlantingDate = plantingDate.ToString("yyyy-MM-dd"),
+                    PlannedPlantingDate = plantingDate.ToString("yyyy-MM-dd"),
                     ReminderDaysBefore = reminderDaysBefore,
                     DaysToHarvest = daysToHarvest,
                     Notes = notes,
@@ -49,8 +49,9 @@ namespace Lab2_G20.Controllers
                 return RedirectToAction("PlantingSchedule");
             }
 
-            // If something goes wrong, return the view (you might want to return an error view or form validation messages)
-            return View();
+            // If ModelState is not valid, return the same PlantingSchedule view but pass the current schedules
+            var plantingSchedules = await _context.PlantingSchedules.ToListAsync();
+            return View("PlantingSchedule", plantingSchedules);
         }
 
         // AJAX: Get the optimal planting date for a specific crop
