@@ -1,22 +1,41 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Remove the margin-bottom and ensure the body takes full height with Flexbox */
 body {
-  margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up the full viewport height */
+    margin: 0; /* Reset any margin */
+}
+
+/* Remove unnecessary margin-bottom on the body */
+body {
+    margin-bottom: 0;
+}
+
+/* Ensure the main container grows with content */
+.container {
+    flex-grow: 1; /* Allow the container to expand and push the footer down */
+}
+
+/* Optional - Padding to avoid footer overlap on small content pages */
+main {
+    padding-bottom: 60px; /* Ensure some space between content and footer */
+}
+
+footer {
+    background-color: #f8f9fa; /* Optional footer style */
+    padding: 1rem 0;
 }
