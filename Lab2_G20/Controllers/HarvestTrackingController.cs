@@ -22,7 +22,7 @@ namespace Lab2_G20.Controllers
             // Hämta alla grödor från databasen
             var crops = await _context.Crops.ToListAsync();
             // Hämta distinkta grödtyper från PlantingSchedules
-            var cropTypes = await _context.PlantingSchedules.Select(ps => ps.CropType).Distinct().ToListAsync();
+            var cropTypes = await _context.PlantingSchedules.Select(ps => ps.Crop).Distinct().ToListAsync();
             ViewBag.CropTypes = cropTypes; // Skickar grödtyper till vyn
 
             return View(crops); // Skickar grödorna till vyn
@@ -51,10 +51,10 @@ namespace Lab2_G20.Controllers
         }
 
         [HttpGet]
-        public async Task<JsonResult> GetDaysToHarvest(string cropType)
+        public async Task<JsonResult> GetDaysToHarvest(string crop)
         {
             var plantingSchedule = await _context.PlantingSchedules
-                .FirstOrDefaultAsync(ps => ps.CropType == cropType);
+                .FirstOrDefaultAsync(ps => ps.Crop == crop);
 
             if (plantingSchedule != null)
             {

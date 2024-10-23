@@ -1,33 +1,89 @@
 ﻿@model IEnumerable<Lab2_G20.Models.PlantingSchedule>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Planting Schedule</title>
-</head>
-<body>
-    <h1>Planting Schedule</h1>
+@{
+    ViewData["Title"] = "Planting Schedule Management";
+}
 
-    <table>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    <!-- Table for planting schedule -->
+    <h2>Current Planting Schedules</h2>
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Crop Type</th>
+                <th>Crop</th>
                 <th>Planting Date</th>
                 <th>Optimal Planting Date</th>
-                <th>Notes</th>
+                <th>Reminder Days Before</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var schedule in Model) // Iterate over each PlantingSchedule
+            @foreach (var schedule in Model)
             {
                 <tr>
-                    <td>@schedule.CropType</td> <!-- Access CropType property -->
-                    <td>@schedule.PlantingDate.ToShortDateString()</td> <!-- Display Planting Date -->
-                    <td>@schedule.OptimalPlantingDate?.ToShortDateString()</td> <!-- Optional date -->
-                    <td>@schedule.Notes</td> <!-- Display Notes -->
+                    <td>@schedule.Crop</td>
+                    <td>@schedule.PlantingDate</td>
+                    <td>@schedule.OptimalPlantingDate</td>
+                    <td>@schedule.ReminderDaysBefore</td>
+                    <td>
+                        <a href="/PlantingSchedule/Edit/@schedule.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="/PlantingSchedule/Delete/@schedule.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
-</body>
-</html>
+
+    <!-- Form to add new planting schedule -->
+    <form id="plantingForm" method="post" asp-action="AddPlantingSchedule">
+        <div class="form-group">
+            <label for="Crop">Crop</label>
+            <input type="text" class="form-control" id="Crop" name="Crop" required onchange="updateOptimalPlantingDate()" />
+        </div>
+
+        <div class="form-group">
+            <label for="PlantingDate">Planting Date</label>
+            <input type="date" class="form-control" id="PlantingDate" name="PlantingDate" required onchange="updateOptimalPlantingDate()" />
+        </div>
+
+        <div class="form-group">
+            <label for="ReminderDaysBefore">Reminder Days Before</label>
+            <input type="number" class="form-control" id="ReminderDaysBefore" name="ReminderDaysBefore" required />
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Add Planting Schedule</button>
+    </form>
+</div>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Add the JavaScript function for updating the optimal planting date -->
+<script>
+    function updateOptimalPlantingDate() {
+        var cropType = $('#Crop').val();
+        var plantingDate = $('#PlantingDate').val();
+
+        if (cropType && plantingDate) {
+            $.ajax({
+                url: '@Url.Action("GetOptimalPlantingDate", "PlantingSchedule")', // AJAX call to controller
+                type: 'GET',
+                data: { crop: cropType },
+                success: function (data) {
+                    if (data.optimalPlantingDate) {
+                        $('#OptimalPlantingDate').val(data.optimalPlantingDate); // Update optimal planting date field
+                    }
+                },
+                error: function () {
+                    alert('Error fetching optimal planting date.');
+                }
+            });
+        }
+    }
+</script>

@@ -1,29 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Lab2_G20.Models
+﻿namespace Lab2_G20.Models
 {
     public class PlantingSchedule
     {
-        public int Id { get; set; }
-
-        [Required]
-        [Display(Name = "Crop Type")]
-        public string CropType { get; set; }
-
-        [Required]
-        [Display(Name = "Planting Date")]
-        [DataType(DataType.Date)]
-        public DateTime PlantingDate { get; set; }
-
-        [Display(Name = "Optimal Planting Date")]
-        [DataType(DataType.Date)]
-        public DateTime? OptimalPlantingDate { get; set; }
-
-        [Display(Name = "Notes")]
-        public string Notes { get; set; }
-
-        public int ReminderDaysBefore { get; set; }
-        public DateTime DaysToHarvest { get; set; }
+        public int Id { get; set; }  // Primary key
+        public string Crop { get; set; } // Crop type
+        public string PlantingDate { get; set; }  // Date of planting
+        public string OptimalPlantingDate { get; set; }  // Calculated optimal planting date
+        public int ReminderDaysBefore { get; set; }  // Days before planting to send reminders
+        public string DaysToHarvest { get; set; }  // Number of days till harvest
+        public string Notes { get; set; }  // Any additional notes about the crop
     }
 }

@@ -1,9 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Lab2_G20\\",
+  "WorkspaceRootPath": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\controllers\\plantingschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\plantingschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\plantingschedule\\plantingschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\plantingschedule\\plantingschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\controllers\\harvesttrackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\harvesttrackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\harvesttrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\harvesttrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\harvesttracking\\harvesttracking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\harvesttracking\\harvesttracking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -14,25 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlantingScheduleController.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "RelativeToolTip": "Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwBYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:52:02.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HarvestTrackingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
+              "RelativeToolTip": "Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:42:48.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlantingSchedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T15:33:37.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlantingSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Models\\PlantingSchedule.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
+              "RelativeToolTip": "Lab2_G20\\Models\\PlantingSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:33:00.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HarvestTracking.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T15:42:00.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HarvestTrackingController.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HarvestTrackingController.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HarvestTrackingController.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HarvestTrackingController.cs",
+              "RelativeToolTip": "Lab2_G20\\Controllers\\HarvestTrackingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:33:16.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Crop.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\Crop.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Models\\Crop.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\Crop.cs",
+              "RelativeToolTip": "Lab2_G20\\Models\\Crop.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:32:52.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:32:33.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Lab2_G20\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAMAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-22T09:36:07.679Z",
               "EditorCaption": ""

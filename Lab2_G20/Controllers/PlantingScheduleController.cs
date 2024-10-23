@@ -1,7 +1,9 @@
-﻿using Lab2_G20.Data; // Your DbContext
-using Lab2_G20.Models; // Your Models
+﻿using Lab2_G20.Data;
+using Lab2_G20.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lab2_G20.Controllers
@@ -15,13 +17,52 @@ namespace Lab2_G20.Controllers
             _context = context;
         }
 
-        // GET: PlantingSchedule
         public async Task<IActionResult> PlantingSchedule()
         {
-            var schedules = await _context.PlantingSchedules.ToListAsync(); // Ensure the using directive for EF Core
-            return View(schedules);
+            // Get all planting schedules
+            var plantingSchedules = await _context.PlantingSchedules.ToListAsync();
+            return View(plantingSchedules);
         }
 
-        // Other actions (Create, Edit, etc.) would follow here...
+        // Add new planting schedule
+        [HttpPost]
+        public async Task<IActionResult> AddPlantingSchedule(string crop, DateTime plantingDate, int reminderDaysBefore)
+        {
+            if (ModelState.IsValid)
+            {
+                var plantingSchedule = new PlantingSchedule
+                {
+                    Crop = crop,
+                    PlantingDate = plantingDate.ToString("yyyy-MM-dd"),
+                    ReminderDaysBefore = reminderDaysBefore,
+                    // Automatically calculate the optimal planting date
+                    OptimalPlantingDate = plantingDate.AddDays(reminderDaysBefore * -1).ToString("yyyy-MM-dd")
+                };
+
+                // Add to database
+                _context.PlantingSchedules.Add(plantingSchedule);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> GetOptimalPlantingDate(string crop)
+        {
+            var plantingSchedule = await _context.PlantingSchedules
+                .FirstOrDefaultAsync(ps => ps.Crop == crop);
+
+            if (plantingSchedule != null)
+            {
+                return Json(new { optimalPlantingDate = plantingSchedule.OptimalPlantingDate });
+            }
+
+            return Json(new { optimalPlantingDate = "" });
+        }
+
+        // For editing or deleting records you can add similar methods
     }
 }
