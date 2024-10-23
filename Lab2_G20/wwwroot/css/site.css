@@ -12,30 +12,11 @@ html {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-/* Remove the margin-bottom and ensure the body takes full height with Flexbox */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure body takes up the full viewport height */
-    margin: 0; /* Reset any margin */
-}
-
-/* Remove unnecessary margin-bottom on the body */
-body {
-    margin-bottom: 0;
-}
-
-/* Ensure the main container grows with content */
-.container {
-    flex-grow: 1; /* Allow the container to expand and push the footer down */
-}
-
-/* Optional - Padding to avoid footer overlap on small content pages */
-main {
-    padding-bottom: 60px; /* Ensure some space between content and footer */
-}
-
-footer {
-    background-color: #f8f9fa; /* Optional footer style */
-    padding: 1rem 0;
+    margin-bottom: 60px;
 }
