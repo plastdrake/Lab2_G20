@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj": {}
+    "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj": {}
   },
   "projects": {
-    "E:\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj": {
+    "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj",
+        "projectUniqueName": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj",
         "projectName": "Lab2_G20",
-        "projectPath": "E:\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj",
-        "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-        "outputPath": "E:\\Lab2_G20\\Lab2_G20\\obj\\",
+        "projectPath": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Lab2_G20.csproj",
+        "packagesPath": "C:\\Users\\agryt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\agryt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
