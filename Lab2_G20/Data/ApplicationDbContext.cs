@@ -12,16 +12,18 @@ namespace Lab2_G20.Data
         }
 
         // DbSets for your models
-        public DbSet<Crop> Crops { get; set; } // DbSet for Crop model
-        public DbSet<PlantingSchedule> PlantingSchedules { get; set; } // DbSet for PlantingSchedule model
+        public DbSet<Crop> Crops { get; set; }
+        public DbSet<PlantingSchedule> PlantingSchedules { get; set; }
+
+        // Add the DbSet for UserReminders
+        public DbSet<UserReminder> UserReminders { get; set; }  // Added UserReminders DbSet
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // Specify the path to the SQLite database
                 var projectPath = AppDomain.CurrentDomain.BaseDirectory;
-                var databasePath = Path.Combine(projectPath, "Lab2_G20.db"); // Create an SQLite database file
+                var databasePath = Path.Combine(projectPath, "Lab2_G20.db");
 
                 optionsBuilder.UseSqlite($"Data Source={databasePath};"); // Use SQLite
             }
@@ -31,8 +33,7 @@ namespace Lab2_G20.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Optional: You can configure your models here if needed
-            // e.g., modelBuilder.Entity<PlantingSchedule>().ToTable("PlantingSchedules");
+            // Optional: Configure your models here if needed
         }
     }
 }

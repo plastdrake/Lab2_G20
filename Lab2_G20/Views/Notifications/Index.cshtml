@@ -1,5 +1,53 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Lab2_G20.Models
+@model IEnumerable<Lab2_G20.Models.NotificationViewModel>
+
 @{
+    ViewData["Title"] = "Notifications";
 }
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    <h2>Your Notifications</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Reminder Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var notification in Model)
+            {
+                <tr>
+                    <td>@notification.Title</td>
+                    <td>@notification.Date.ToShortDateString()</td>
+                    <td>@notification.ReminderNotes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Form to Add Personal Reminders -->
+    <h2>Add Personal Reminder</h2>
+    <form method="post" asp-action="AddPersonalReminder">
+        <div class="form-group">
+            <label for="TaskName">Task Name</label>
+            <input type="text" class="form-control" id="TaskName" name="TaskName" required />
+        </div>
+
+        <div class="form-group">
+            <label for="ReminderDate">Reminder Date</label>
+            <input type="date" class="form-control" id="ReminderDate" name="ReminderDate" required />
+        </div>
+
+        <div class="form-group">
+            <label for="ReminderNotes">Notes</label>
+            <input type="text" class="form-control" id="ReminderNotes" name="ReminderNotes" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Set Reminder</button>
+    </form>
+</div>
+
