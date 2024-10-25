@@ -17,99 +17,99 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lab2_G20
 build_property.RootNamespace = Lab2_G20
-build_property.ProjectDir = C:\Users\agryt\Documents\GitHub\Lab2_G20\Lab2_G20\
+build_property.ProjectDir = E:\Lab2_G20\Lab2_G20\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\agryt\Documents\GitHub\Lab2_G20\Lab2_G20
+build_property.MSBuildProjectDirectory = E:\Lab2_G20\Lab2_G20
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Areas/Identity/Pages/_ViewStart.cshtml]
+[E:/Lab2_G20/Lab2_G20/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Crop/Create.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Crop/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Crop/Delete.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Crop/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Crop/Details.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Crop/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Crop/Edit.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Crop/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Crop/Index.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Crop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Growth/Index.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Growth/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/HarvestTracking/HarvestTracking.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/HarvestTracking/HarvestTracking.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFydmVzdFRyYWNraW5nXEhhcnZlc3RUcmFja2luZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Home/Index.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Home/Privacy.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Notifications/Index.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Notifications/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Create.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRpbmdTY2hlZHVsZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Delete.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRpbmdTY2hlZHVsZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Details.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRpbmdTY2hlZHVsZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Edit.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/PlantingSchedule/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRpbmdTY2hlZHVsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/PlantingSchedule/PlantingSchedule.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/PlantingSchedule/PlantingSchedule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRpbmdTY2hlZHVsZVxQbGFudGluZ1NjaGVkdWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Shared/Error.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Shared/_LoginPartial.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/_ViewImports.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/_ViewStart.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agryt/Documents/GitHub/Lab2_G20/Lab2_G20/Views/Shared/_Layout.cshtml]
+[E:/Lab2_G20/Lab2_G20/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xwkh6ffkh7
