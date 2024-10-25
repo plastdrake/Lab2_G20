@@ -3,72 +3,24 @@
   "WorkspaceRootPath": "E:\\Lab2_G20\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\controllers\\plantingschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\plantingschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\plantingschedule\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\plantingschedule\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\controllers\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\crop\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\crop\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\notifications\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\notifications\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\userreminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\userreminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\weatherresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\weatherresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\models\\harvesttrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\harvesttrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\plantingschedule\\plantingschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\plantingschedule\\plantingschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\plantingschedule\\plantingschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\harvesttracking\\harvesttracking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\harvesttracking\\harvesttracking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\controllers\\harvesttrackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\harvesttrackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,209 +42,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\ErrorViewModel.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:36:24.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GrowthHistory.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\GrowthHistory.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\GrowthHistory.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\GrowthHistory.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\GrowthHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:28:49.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Lab2_G20\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:06:23.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Lab2_G20\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:02:23.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "RelativeToolTip": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:09:17.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NotificationViewModel.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\NotificationViewModel.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\NotificationViewModel.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\NotificationViewModel.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\NotificationViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:18:05.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotificationsController.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\NotificationsController.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\NotificationsController.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\NotificationsController.cs",
-              "RelativeToolTip": "Lab2_G20\\Controllers\\NotificationsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:03:18.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserReminder.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\UserReminder.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\UserReminder.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\UserReminder.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\UserReminder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:04:55.097Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlantingSchedule.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\PlantingSchedule.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\PlantingSchedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:07:16.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Crop.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\Crop.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\Crop.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\Crop.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\Crop.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:14:54.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WeatherResponse.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\WeatherResponse.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\WeatherResponse.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\WeatherResponse.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\WeatherResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:23:47.271Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Lab2_G20\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:16:56.288Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HarvestTrackingViewModel.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:08:21.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "PlantingSchedule.cshtml",
               "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
               "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
               "RelativeToolTip": "Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwCEAAABwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:55:44.173Z"
+              "WhenOpened": "2024-10-25T08:33:24.51Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\PlantingSchedule\\Delete.cshtml",
+              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\Delete.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\PlantingSchedule\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T09:40:14.599Z"
+              "WhenOpened": "2024-10-25T08:30:34.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HarvestTracking.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
-              "RelativeDocumentMoniker": "Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
-              "RelativeToolTip": "Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T09:08:28.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "HarvestTrackingController.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HarvestTrackingController.cs",
-              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HarvestTrackingController.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HarvestTrackingController.cs",
-              "RelativeToolTip": "Lab2_G20\\Controllers\\HarvestTrackingController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAmwFYAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "PlantingScheduleController.cs",
+              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "RelativeToolTip": "Lab2_G20\\Controllers\\PlantingScheduleController.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAmwJUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:08:23.315Z"
+              "WhenOpened": "2024-10-25T08:33:21.42Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Crop\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Crop\\Edit.cshtml",
+              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Crop\\Edit.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\Crop\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T08:50:11.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CropController.cs",
+              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\CropController.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\CropController.cs",
+              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\CropController.cs",
+              "RelativeToolTip": "Lab2_G20\\Controllers\\CropController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAQwGUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T08:44:53.002Z",
+              "EditorCaption": ""
             }
           ]
         }

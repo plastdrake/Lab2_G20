@@ -19,7 +19,7 @@ namespace Lab2_G20.Data
         public DbSet<UserReminder> UserReminders { get; set; }  // Added UserReminders DbSet
 
         // Growth history DbSet
-        public DbSet<GrowthHistory> GrowthHistories { get; set; }
+        public DbSet<GrowthHistory> GrowthHistory { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

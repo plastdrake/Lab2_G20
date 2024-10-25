@@ -44,23 +44,25 @@ namespace Lab2_G20.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Comments")
+                    b.Property<int>("CropId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateRecorded")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("GrowthStage")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CropType")
+                    b.Property<string>("Notes")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("HarvestDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("PlantingDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("GrowthHistories");
+                    b.HasIndex("CropId");
+
+                    b.ToTable("GrowthHistory");
                 });
 
             modelBuilder.Entity("Lab2_G20.Models.PlantingSchedule", b =>
@@ -112,6 +114,17 @@ namespace Lab2_G20.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserReminders");
+                });
+
+            modelBuilder.Entity("Lab2_G20.Models.GrowthHistory", b =>
+                {
+                    b.HasOne("Lab2_G20.Models.Crop", "Crop")
+                        .WithMany()
+                        .HasForeignKey("CropId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Crop");
                 });
 #pragma warning restore 612, 618
         }
