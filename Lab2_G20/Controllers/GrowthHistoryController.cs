@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -48,16 +46,18 @@ namespace Lab2_G20.Controllers
         // GET: GrowthHistory/Create
         public IActionResult Create()
         {
-            ViewData["CropId"] = new SelectList(_context.Crops, "Id", "Id");
+            // Fetch distinct crop types with IDs from the PlantingSchedule table
+            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
+                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+                .Distinct(), "Id", "CropType");
+
             return View();
         }
 
         // POST: GrowthHistory/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
+        public async Task<IActionResult> Create([Bind("CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,12 @@ namespace Lab2_G20.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CropId"] = new SelectList(_context.Crops, "Id", "Id", growthHistory.CropId);
+
+            // Re-fetch crop types in case of an error
+            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
+                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+                .Distinct(), "Id", "CropType");
+
             return View(growthHistory);
         }
 
@@ -82,43 +87,12 @@ namespace Lab2_G20.Controllers
             {
                 return NotFound();
             }
-            ViewData["CropId"] = new SelectList(_context.Crops, "Id", "Id", growthHistory.CropId);
-            return View(growthHistory);
-        }
 
-        // POST: GrowthHistory/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
-        {
-            if (id != growthHistory.Id)
-            {
-                return NotFound();
-            }
+            // Fetch distinct crop types from the PlantingSchedule table
+            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
+                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+                .Distinct(), "Id", "CropType");
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(growthHistory);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!GrowthHistoryExists(growthHistory.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["CropId"] = new SelectList(_context.Crops, "Id", "Id", growthHistory.CropId);
             return View(growthHistory);
         }
 
@@ -142,7 +116,6 @@ namespace Lab2_G20.Controllers
         }
 
         // POST: GrowthHistory/Delete/5
-        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
