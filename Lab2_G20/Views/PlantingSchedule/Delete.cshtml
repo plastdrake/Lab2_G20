@@ -17,7 +17,7 @@
         <strong>Notes:</strong> @Model.Notes
     </div>
 
-    <form asp-action="DeleteConfirmed" method="post">
+    <form asp-action="DeleteConfirmed">
         <input type="hidden" asp-for="Id" />
         <button type="submit" class="btn btn-danger">Delete</button>
         <a asp-action="PlantingSchedule" class="btn btn-secondary">Cancel</a>

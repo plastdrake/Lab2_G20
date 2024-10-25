@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Lab2_G20.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,22 +24,6 @@ namespace Lab2_G20.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Crops", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "GrowthHistories",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CropType = table.Column<string>(type: "TEXT", nullable: false),
-                    PlantingDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    HarvestDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Comments = table.Column<string>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GrowthHistories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,22 +58,49 @@ namespace Lab2_G20.Migrations
                 {
                     table.PrimaryKey("PK_UserReminders", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "GrowthHistory",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CropId = table.Column<int>(type: "INTEGER", nullable: false),
+                    DateRecorded = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    GrowthStage = table.Column<string>(type: "TEXT", nullable: false),
+                    Notes = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GrowthHistory", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_GrowthHistory_Crops_CropId",
+                        column: x => x.CropId,
+                        principalTable: "Crops",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_GrowthHistory_CropId",
+                table: "GrowthHistory",
+                column: "CropId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Crops");
-
-            migrationBuilder.DropTable(
-                name: "GrowthHistories");
+                name: "GrowthHistory");
 
             migrationBuilder.DropTable(
                 name: "PlantingSchedules");
 
             migrationBuilder.DropTable(
                 name: "UserReminders");
+
+            migrationBuilder.DropTable(
+                name: "Crops");
         }
     }
 }

@@ -50,8 +50,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Lab2_G20/Lab2_G20/Views/Growth/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoXEluZGV4LmNzaHRtbA==
+[E:/Lab2_G20/Lab2_G20/Views/GrowthHistory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoSGlzdG9yeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Lab2_G20/Lab2_G20/Views/GrowthHistory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoSGlzdG9yeVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Lab2_G20/Lab2_G20/Views/GrowthHistory/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoSGlzdG9yeVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Lab2_G20/Lab2_G20/Views/GrowthHistory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoSGlzdG9yeVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Lab2_G20/Lab2_G20/Views/GrowthHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Jvd3RoSGlzdG9yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Lab2_G20/Lab2_G20/Views/HarvestTracking/HarvestTracking.cshtml]

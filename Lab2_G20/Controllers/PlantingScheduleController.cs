@@ -20,7 +20,6 @@ namespace Lab2_G20.Controllers
         // GET: Display all planting schedules
         public async Task<IActionResult> PlantingSchedule()
         {
-            // Get all planting schedules from the database
             var plantingSchedules = await _context.PlantingSchedules.ToListAsync();
             return View(plantingSchedules);
         }
@@ -54,18 +53,14 @@ namespace Lab2_G20.Controllers
                 }
             }
 
-            // Return the same view if ModelState is invalid
             var plantingSchedules = await _context.PlantingSchedules.ToListAsync();
             return View("PlantingSchedule", plantingSchedules);
         }
-
-
 
         // AJAX: Get the optimal planting date for a specific crop
         [HttpGet]
         public async Task<JsonResult> GetOptimalPlantingDate(string crop)
         {
-            // Retrieve the planting schedule for the specified crop
             var plantingSchedule = await _context.PlantingSchedules.FirstOrDefaultAsync(ps => ps.Crop == crop);
 
             if (plantingSchedule != null)
@@ -76,7 +71,7 @@ namespace Lab2_G20.Controllers
             return Json(new { optimalPlantingDate = "" }); // Return an empty string if no schedule is found
         }
 
-        // GET: Edit planting schedule (display the edit form - implementation will depend on your requirements)
+        // GET: Edit planting schedule
         public async Task<IActionResult> Edit(int id)
         {
             var plantingSchedule = await _context.PlantingSchedules.FindAsync(id);
@@ -85,11 +80,10 @@ namespace Lab2_G20.Controllers
                 return NotFound();
             }
 
-            // Return the view for editing the schedule
             return View(plantingSchedule);
         }
 
-        // POST: Update planting schedule (save the changes to the database)
+        // POST: Update planting schedule
         [HttpPost]
         public async Task<IActionResult> Edit(int id, PlantingSchedule plantingSchedule)
         {
@@ -123,9 +117,14 @@ namespace Lab2_G20.Controllers
         }
 
         // GET: Delete planting schedule confirmation
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int? id)
         {
-            var plantingSchedule = await _context.PlantingSchedules.FindAsync(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var plantingSchedule = await _context.PlantingSchedules.FirstOrDefaultAsync(m => m.Id == id);
             if (plantingSchedule == null)
             {
                 return NotFound();
@@ -135,7 +134,6 @@ namespace Lab2_G20.Controllers
         }
 
         // POST: Confirm and delete planting schedule
-        [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var plantingSchedule = await _context.PlantingSchedules.FindAsync(id);
