@@ -7,20 +7,28 @@
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\notifications\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\notifications\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\userreminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\userreminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\plantingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,17 +70,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Lab2_G20\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T07:06:23.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T07:02:23.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:09:17.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NotificationViewModel.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\NotificationViewModel.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\NotificationViewModel.cs",
               "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\NotificationViewModel.cs",
               "RelativeToolTip": "Lab2_G20\\Models\\NotificationViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:18:05.392Z",
               "EditorCaption": ""
@@ -85,53 +132,40 @@
               "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\NotificationsController.cs",
               "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\NotificationsController.cs",
               "RelativeToolTip": "Lab2_G20\\Controllers\\NotificationsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswCIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:03:18.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "RelativeDocumentMoniker": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "RelativeToolTip": "Lab2_G20\\Views\\Notifications\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAADgvxQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:09:17.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserReminder.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\UserReminder.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\UserReminder.cs",
-              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\UserReminder.cs",
-              "RelativeToolTip": "Lab2_G20\\Models\\UserReminder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\UserReminder.cs*",
+              "RelativeToolTip": "Lab2_G20\\Models\\UserReminder.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:04:55.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "PlantingSchedule.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\PlantingSchedule.cs",
               "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\PlantingSchedule.cs",
               "RelativeToolTip": "Lab2_G20\\Models\\PlantingSchedule.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:07:16.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Crop.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\Crop.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\Crop.cs",
@@ -143,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "WeatherResponse.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\WeatherResponse.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\WeatherResponse.cs",
@@ -155,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Data\\ApplicationDbContext.cs",
@@ -167,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HarvestTrackingViewModel.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\HarvestTrackingViewModel.cs",
@@ -179,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PlantingSchedule.cshtml",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\PlantingSchedule\\PlantingSchedule.cshtml",
@@ -191,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\Shared\\_Layout.cshtml",
@@ -203,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "HarvestTracking.cshtml",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\HarvestTracking\\HarvestTracking.cshtml",
@@ -215,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "HarvestTrackingController.cs",
               "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HarvestTrackingController.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HarvestTrackingController.cs",

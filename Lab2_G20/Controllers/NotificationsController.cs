@@ -24,7 +24,7 @@ public class NotificationsController : Controller
         // Reminder for upcoming planting
         new NotificationViewModel
         {
-            Title = "Upcoming Planting Reminder",
+            Title = $"Plant {schedule.Crop}",
             Date = schedule.PlannedPlantingDate.Value.AddDays(-schedule.ReminderDaysBefore), // Reminder date for planting
             ReminderNotes = $"Remember to plant {schedule.Crop}!",
             IsCustomReminder = false // Set as needed
@@ -32,7 +32,7 @@ public class NotificationsController : Controller
         // Reminder for harvest
         new NotificationViewModel
         {
-            Title = "Upcoming Harvest Reminder",
+            Title = $"Harvest {schedule.Crop}",
             Date = schedule.PlannedPlantingDate.Value.AddDays(schedule.DaysToHarvest), // Harvest date
             ReminderNotes = $"Time to harvest {schedule.Crop}!",
             IsCustomReminder = false // Set as needed
