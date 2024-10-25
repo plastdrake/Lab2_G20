@@ -1,4 +1,4 @@
-﻿using Lab2_G20.Models; // Ensure your models are correctly referenced
+﻿using Lab2_G20.Models;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 
