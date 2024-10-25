@@ -1,11 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Farm Management - Home";
+    var isReminderDue = ViewBag.IsReminderDue as bool? ?? false;
 }
 
 <!-- Main Menu -->
 <div class="container">
     <h1 class="text-center">Farm Management Dashboard</h1>
     <p class="text-center">Welcome to the farm management system. Use the buttons below to manage your crops, schedules, and more.</p>
+
+    <!-- Exclamation Button for Reminder Notifications -->
+    @if (isReminderDue)
+    {
+        <div style="position: absolute; top: 70px; right: 10px;">
+            <a href="@Url.Action("Index", "Notifications")" class="btn btn-danger" title="Upcoming planting reminder!">
+                <i class="fas fa-exclamation-circle"></i>
+            </a>
+        </div>
+    }
 
     <div class="row mb-4 d-flex align-items-stretch">
         <div class="col-md-3">
@@ -40,3 +51,7 @@
         }
     </div>
 </div>
+
+<!-- Font Awesome for Exclamation Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+

@@ -1,4 +1,5 @@
 using Lab2_G20.Data;
+using Lab2_G20.Controllers; // Add this line for NotificationsController
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,10 @@ builder.Services.AddControllersWithViews();
 // Register HttpClient service
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<WeatherService>(); // Register WeatherService
-builder.Services.AddControllersWithViews();
+
+// Register NotificationsController for dependency injection
+builder.Services.AddScoped<NotificationsController>(); // Add this line
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

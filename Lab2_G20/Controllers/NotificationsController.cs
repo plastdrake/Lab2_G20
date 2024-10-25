@@ -1,45 +1,70 @@
-﻿using Lab2_G20.Data;
-using Lab2_G20.Models;
+﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Lab2_G20.Data;
+using Lab2_G20.Models;
 
-public class NotificationsController : Controller
+namespace Lab2_G20.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public NotificationsController(ApplicationDbContext context)
+    public class NotificationsController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    public IActionResult Index()
-    {
-        // Get the schedules with planned planting dates
-        var schedules = _context.PlantingSchedules
-            .Where(schedule => schedule.PlannedPlantingDate.HasValue) // Ensure PlannedPlantingDate is not null
-            .ToList(); // Execute the query and bring results into memory
-
-        // Create notifications
-        var notifications = schedules.SelectMany(schedule => new[]
+        public NotificationsController(ApplicationDbContext context)
         {
-        // Reminder for upcoming planting
-        new NotificationViewModel
-        {
-            Title = $"Plant {schedule.Crop}",
-            Date = schedule.PlannedPlantingDate.Value.AddDays(-schedule.ReminderDaysBefore), // Reminder date for planting
-            ReminderNotes = $"Remember to plant {schedule.Crop}!",
-            IsCustomReminder = false // Set as needed
-        },
-        // Reminder for harvest
-        new NotificationViewModel
-        {
-            Title = $"Harvest {schedule.Crop}",
-            Date = schedule.PlannedPlantingDate.Value.AddDays(schedule.DaysToHarvest), // Harvest date
-            ReminderNotes = $"Time to harvest {schedule.Crop}!",
-            IsCustomReminder = false // Set as needed
+            _context = context;
         }
-    }).ToList();
 
-        return View(notifications); // Pass the view model to the view
+        // Index action to display all notifications
+        public IActionResult Index()
+        {
+            // Fetch planting schedules from the database
+            var schedules = _context.PlantingSchedules
+                .Where(schedule => schedule.PlannedPlantingDate.HasValue)
+                .ToList();
+
+            // Generate notifications for planting and harvest
+            var notifications = schedules.SelectMany(schedule => new[]
+            {
+                new NotificationViewModel
+                {
+                    Title = $"Plant {schedule.Crop}",
+                    Date = schedule.PlannedPlantingDate.Value,
+                    ReminderNotes = $"Remember to plant {schedule.Crop}!",
+                    IsCustomReminder = false
+                },
+                new NotificationViewModel
+                {
+                    Title = $"Harvest {schedule.Crop}",
+                    Date = schedule.PlannedPlantingDate.Value.AddDays(schedule.DaysToHarvest),
+                    ReminderNotes = $"Time to harvest {schedule.Crop}!",
+                    IsCustomReminder = false
+                }
+            }).ToList();
+
+            // Calculate if any crop is within the ReminderDaysBefore range
+            ViewBag.IsReminderDue = CheckIfReminderDue();
+
+            // Pass the notifications to the view
+            return View(notifications);
+        }
+
+        // Method to check if a reminder is due based on planting schedules
+        public bool CheckIfReminderDue()
+        {
+            var today = DateTime.Today;
+
+            // Retrieve planting schedules that have a planned planting date
+            var schedules = _context.PlantingSchedules
+                .Where(schedule => schedule.PlannedPlantingDate.HasValue)
+                .ToList();
+
+            // Determine if any crop is within the reminder period
+            return schedules.Any(schedule =>
+                schedule.PlannedPlantingDate.HasValue &&
+                today >= schedule.PlannedPlantingDate.Value.AddDays(-schedule.ReminderDaysBefore) &&
+                today < schedule.PlannedPlantingDate.Value
+            );
+        }
     }
-
 }
