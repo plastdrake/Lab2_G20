@@ -26,22 +26,36 @@ namespace Lab2_G20.Controllers
             return View(GetNotifications());
         }
 
-        // Method to check if a reminder is due based on planting schedules
+        // Method to check if a reminder is due based on planting schedules or custom reminders
         public bool CheckIfReminderDue()
         {
             var today = DateTime.Today;
+            var tomorrow = today.AddDays(1);
 
             // Retrieve planting schedules that have a planned planting date
             var schedules = _context.PlantingSchedules
                 .Where(schedule => schedule.PlannedPlantingDate.HasValue)
                 .ToList();
 
-            // Determine if any crop is within the reminder period
-            return schedules.Any(schedule =>
+            // Check for planting and harvesting reminders due within 1 day
+            bool isPlantingReminderDue = schedules.Any(schedule =>
                 schedule.PlannedPlantingDate.HasValue &&
-                today >= schedule.PlannedPlantingDate.Value.AddDays(-schedule.ReminderDaysBefore) &&
-                today < schedule.PlannedPlantingDate.Value
-            );
+                schedule.PlannedPlantingDate.Value <= tomorrow &&
+                schedule.PlannedPlantingDate.Value >= today);
+
+            bool isHarvestReminderDue = schedules.Any(schedule =>
+                schedule.PlannedPlantingDate.HasValue &&
+                schedule.PlannedPlantingDate.Value.AddDays(schedule.DaysToHarvest) <= tomorrow &&
+                schedule.PlannedPlantingDate.Value.AddDays(schedule.DaysToHarvest) >= today);
+
+            // Check for custom user reminders due within 1 day
+            var userReminders = _context.UserReminders.ToList();
+            bool isCustomReminderDue = userReminders.Any(reminder =>
+                reminder.ReminderDate <= tomorrow &&
+                reminder.ReminderDate >= today);
+
+            // Return true if any reminder is due within the next day
+            return isPlantingReminderDue || isHarvestReminderDue || isCustomReminderDue;
         }
 
         // Action to add personal reminders
