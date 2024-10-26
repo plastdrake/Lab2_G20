@@ -19,10 +19,8 @@ namespace Lab2_G20.Controllers
         // Index action to display all notifications
         public IActionResult Index()
         {
-            // Check if any reminder is due
             ViewBag.IsReminderDue = CheckIfReminderDue();
 
-            // Pass the notifications to the view
             return View(GetNotifications());
         }
 

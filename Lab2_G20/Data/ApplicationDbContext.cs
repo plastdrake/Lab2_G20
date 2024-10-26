@@ -11,14 +11,9 @@ namespace Lab2_G20.Data
         {
         }
 
-        // DbSets for your models
         public DbSet<Crop> Crops { get; set; }
         public DbSet<PlantingSchedule> PlantingSchedules { get; set; }
-
-        // Add the DbSet for UserReminders
-        public DbSet<UserReminder> UserReminders { get; set; }  // Added UserReminders DbSet
-
-        // Growth history DbSet
+        public DbSet<UserReminder> UserReminders { get; set; }
         public DbSet<GrowthHistory> GrowthHistory { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -36,7 +31,7 @@ namespace Lab2_G20.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Optional: Configure your models here if needed
+            // Optional: Configure models
         }
     }
 }
