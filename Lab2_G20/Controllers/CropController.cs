@@ -96,7 +96,7 @@ namespace Lab2_G20.Controllers
                 _context.Crops.Remove(crop);
                 await _context.SaveChangesAsync();
             }
-            return RedirectToAction(nameof(Index)); // Redirects to Index or another page after deletion
+            return RedirectToAction("HarvestTracking", "HarvestTracking");
         }
 
 

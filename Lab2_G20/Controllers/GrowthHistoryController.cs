@@ -20,7 +20,6 @@ namespace Lab2_G20.Controllers
         // GET: GrowthHistory
         public async Task<IActionResult> Index()
         {
-            await SeedData();
             return View(await _context.GrowthHistory.Include(g => g.Crop).ToListAsync());
         }
 
@@ -49,15 +48,26 @@ namespace Lab2_G20.Controllers
         // POST: GrowthHistory/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(GrowthHistory growthHistory)
+        public async Task<IActionResult> Create(int CropId, string GrowthStage, string Notes, DateTime DateRecorded)
         {
+            // Create a new instance of GrowthHistory
+            var growthHistory = new GrowthHistory
+            {
+                CropId = CropId,
+                GrowthStage = GrowthStage,
+                Notes = Notes,
+                DateRecorded = DateRecorded
+            };
+
+            // Validate the model state
             if (ModelState.IsValid)
             {
                 _context.Add(growthHistory);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index)); // Redirect as necessary
             }
-            // Repopulate crops in case of an error
+
+            // Repopulate crops if the model state is invalid
             ViewBag.Crops = await _context.Crops.ToListAsync();
             return View(growthHistory);
         }
@@ -73,18 +83,23 @@ namespace Lab2_G20.Controllers
 
             // Fetch available crops from the database
             ViewBag.Crops = await _context.Crops.ToListAsync();
-            return View(growthHistory);
+            return View(growthHistory); // Return the existing growth history object to pre-fill the form
         }
 
         // POST: GrowthHistory/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, GrowthHistory growthHistory)
+        public async Task<IActionResult> Edit(int id, int CropId, string GrowthStage, string Notes, DateTime DateRecorded)
         {
-            if (id != growthHistory.Id)
+            // Create a new instance of GrowthHistory with updated values
+            var growthHistory = new GrowthHistory
             {
-                return NotFound();
-            }
+                Id = id,
+                CropId = CropId,
+                GrowthStage = GrowthStage,
+                Notes = Notes,
+                DateRecorded = DateRecorded
+            };
 
             if (ModelState.IsValid)
             {
@@ -106,10 +121,12 @@ namespace Lab2_G20.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             // Repopulate crops in case of an error
             ViewBag.Crops = await _context.Crops.ToListAsync();
             return View(growthHistory);
         }
+
 
         // GET: GrowthHistory/Delete/5
         public async Task<IActionResult> Delete(int id)
@@ -141,44 +158,5 @@ namespace Lab2_G20.Controllers
             return _context.GrowthHistory.Any(e => e.Id == id);
         }
 
-        // Seed method to populate GrowthHistory with sample data
-        private async Task SeedData()
-        {
-            // Check if the table is empty
-            if (!_context.GrowthHistory.Any())
-            {
-                var crops = await _context.Crops.ToListAsync(); // Fetch available crops
-
-                // Sample data for growth history
-                var growthHistories = new List<GrowthHistory>
-                {
-                    new GrowthHistory
-                    {
-                        CropId = crops.First().Id, // Assuming there's at least one crop
-                        DateRecorded = DateTime.Now.AddDays(-10),
-                        GrowthStage = "Seedling",
-                        Notes = "Planted seeds."
-                    },
-                    new GrowthHistory
-                    {
-                        CropId = crops.First().Id,
-                        DateRecorded = DateTime.Now.AddDays(-5),
-                        GrowthStage = "Vegetative",
-                        Notes = "The plants are growing well."
-                    },
-                    new GrowthHistory
-                    {
-                        CropId = crops.First().Id,
-                        DateRecorded = DateTime.Now,
-                        GrowthStage = "Flowering",
-                        Notes = "Plants have started to flower."
-                    }
-                };
-
-                // Add the sample data to the context and save changes
-                await _context.GrowthHistory.AddRangeAsync(growthHistories);
-                await _context.SaveChangesAsync();
-            }
-        }
     }
 }

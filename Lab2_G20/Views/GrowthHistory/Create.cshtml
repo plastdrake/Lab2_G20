@@ -2,16 +2,16 @@
 
 <h1>Create Growth History</h1>
 
-<form asp-action="Create">
-    <input type="hidden" asp-for="DateRecorded" value="@Model.DateRecorded.ToString("yyyy-MM-dd")" />
+<form asp-action="Create" method="post">
+    <input type="hidden" name="DateRecorded" value="@DateTime.Now.ToString("yyyy-MM-dd")" /> <!-- Set today's date here -->
 
     <div class="form-group">
         <label asp-for="CropId" class="control-label"></label>
-        <select asp-for="CropId" class="form-control">
+        <select name="CropId" class="form-control">
             <option value="">Select Crop Type</option>
             @foreach (var crop in ViewBag.Crops)
             {
-                <option value="@crop.Id">@crop.CropType</option> <!-- Assuming your Crop model has Id and Name properties -->
+                <option value="@crop.Id">@crop.CropType</option>
             }
         </select>
         <span asp-validation-for="CropId" class="text-danger"></span>
@@ -19,7 +19,7 @@
 
     <div class="form-group">
         <label asp-for="GrowthStage" class="control-label"></label>
-        <select asp-for="GrowthStage" class="form-control">
+        <select name="GrowthStage" class="form-control">
             <option value="">Select Growth Stage</option>
             <option value="Seedling">Seedling</option>
             <option value="Vegetative">Vegetative</option>
@@ -33,7 +33,7 @@
 
     <div class="form-group">
         <label asp-for="Notes" class="control-label"></label>
-        <textarea asp-for="Notes" class="form-control" rows="4"></textarea>
+        <textarea name="Notes" class="form-control" rows="4"></textarea>
         <span asp-validation-for="Notes" class="text-danger"></span>
     </div>
 
