@@ -23,6 +23,6 @@ public class WeatherService
             return await response.Content.ReadFromJsonAsync<WeatherResponse>();
         }
 
-        return null; // Handle errors as needed
+        return null;
     }
 }
