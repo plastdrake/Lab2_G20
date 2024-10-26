@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "E:\\Lab2_G20\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\views\\growthhistory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\growthhistory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\controllers\\growthhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\growthhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\growthhistory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\growthhistory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\growthhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\growthhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\models\\growthhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,12 +39,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T11:13:38.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Create.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\GrowthHistory\\Create.cshtml",
               "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Create.cshtml",
               "RelativeToolTip": "Lab2_G20\\Views\\GrowthHistory\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABSAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-25T09:05:23.557Z",
               "EditorCaption": ""
@@ -53,7 +70,7 @@
               "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\GrowthHistoryController.cs",
               "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\GrowthHistoryController.cs",
               "RelativeToolTip": "Lab2_G20\\Controllers\\GrowthHistoryController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAqwEoAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T09:07:36.019Z",
               "EditorCaption": ""
@@ -66,13 +83,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GrowthHistory.cs",
               "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Models\\GrowthHistory.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Models\\GrowthHistory.cs",
               "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Models\\GrowthHistory.cs",
               "RelativeToolTip": "Lab2_G20\\Models\\GrowthHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T09:02:00.499Z",
               "EditorCaption": ""

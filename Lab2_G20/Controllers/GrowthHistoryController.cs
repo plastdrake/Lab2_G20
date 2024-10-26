@@ -18,10 +18,32 @@ namespace Lab2_G20.Controllers
         }
 
         // GET: GrowthHistory
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
         {
-            var applicationDbContext = _context.GrowthHistory.Include(g => g.Crop);
-            return View(await applicationDbContext.ToListAsync());
+            var growthHistories = _context.GrowthHistory.Include(g => g.Crop).AsQueryable();
+
+            // Search by crop type or notes
+            if (!string.IsNullOrEmpty(search))
+            {
+                growthHistories = growthHistories.Where(g =>
+                    g.Crop.CropType.Contains(search) || g.Notes.Contains(search));
+            }
+
+            // Retrieve list of crops with planting and harvested dates
+            var cropsWithDates = await _context.Crops
+                .Select(c => new
+                {
+                    c.CropType,
+                    c.PlantingDate,
+                    c.HarvestDate
+                })
+                .ToListAsync();
+
+            // Pass the cropsWithDates to the view using ViewBag
+            ViewBag.CropsWithDates = cropsWithDates;
+
+            // Return the list of GrowthHistory using the model directly
+            return View(await growthHistories.ToListAsync());
         }
 
         // GET: GrowthHistory/Details/5
@@ -46,9 +68,8 @@ namespace Lab2_G20.Controllers
         // GET: GrowthHistory/Create
         public IActionResult Create()
         {
-            // Fetch distinct crop types with IDs from the PlantingSchedule table
-            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
-                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+            ViewBag.CropTypes = new SelectList(_context.Crops
+                .Select(c => new { Id = c.Id, CropType = c.CropType })
                 .Distinct(), "Id", "CropType");
 
             return View();
@@ -66,9 +87,8 @@ namespace Lab2_G20.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            // Re-fetch crop types in case of an error
-            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
-                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+            ViewBag.CropTypes = new SelectList(_context.Crops
+                .Select(c => new { Id = c.Id, CropType = c.CropType })
                 .Distinct(), "Id", "CropType");
 
             return View(growthHistory);
@@ -88,9 +108,46 @@ namespace Lab2_G20.Controllers
                 return NotFound();
             }
 
-            // Fetch distinct crop types from the PlantingSchedule table
-            ViewBag.CropTypes = new SelectList(_context.PlantingSchedules
-                .Select(ps => new { Id = ps.Id, CropType = ps.Crop })
+            ViewBag.CropTypes = new SelectList(_context.Crops
+                .Select(c => new { Id = c.Id, CropType = c.CropType })
+                .Distinct(), "Id", "CropType");
+
+            return View(growthHistory);
+        }
+
+        // POST: GrowthHistory/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
+        {
+            if (id != growthHistory.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(growthHistory);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!GrowthHistoryExists(growthHistory.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.CropTypes = new SelectList(_context.Crops
+                .Select(c => new { Id = c.Id, CropType = c.CropType })
                 .Distinct(), "Id", "CropType");
 
             return View(growthHistory);
@@ -116,6 +173,7 @@ namespace Lab2_G20.Controllers
         }
 
         // POST: GrowthHistory/Delete/5
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
