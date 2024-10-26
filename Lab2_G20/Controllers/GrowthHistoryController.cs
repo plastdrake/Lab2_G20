@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Lab2_G20.Data;
 using Lab2_G20.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Lab2_G20.Data;
 
 namespace Lab2_G20.Controllers
 {
@@ -18,67 +18,38 @@ namespace Lab2_G20.Controllers
         }
 
         // GET: GrowthHistory
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index()
         {
-            var growthHistories = _context.GrowthHistory.Include(g => g.Crop).AsQueryable();
-
-            // Search by crop type or notes
-            if (!string.IsNullOrEmpty(search))
-            {
-                growthHistories = growthHistories.Where(g =>
-                    g.Crop.CropType.Contains(search) || g.Notes.Contains(search));
-            }
-
-            // Retrieve list of crops with planting and harvested dates
-            var cropsWithDates = await _context.Crops
-                .Select(c => new
-                {
-                    c.CropType,
-                    c.PlantingDate,
-                    c.HarvestDate
-                })
-                .ToListAsync();
-
-            // Pass the cropsWithDates to the view using ViewBag
-            ViewBag.CropsWithDates = cropsWithDates;
-
-            // Return the list of GrowthHistory using the model directly
-            return View(await growthHistories.ToListAsync());
+            await SeedData();
+            return View(await _context.GrowthHistory.Include(g => g.Crop).ToListAsync());
         }
 
         // GET: GrowthHistory/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var growthHistory = await _context.GrowthHistory
-                .Include(g => g.Crop)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var growthHistory = await _context.GrowthHistory.Include(g => g.Crop).FirstOrDefaultAsync(m => m.Id == id);
             if (growthHistory == null)
             {
                 return NotFound();
             }
-
             return View(growthHistory);
         }
 
         // GET: GrowthHistory/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewBag.CropTypes = new SelectList(_context.Crops
-                .Select(c => new { Id = c.Id, CropType = c.CropType })
-                .Distinct(), "Id", "CropType");
-
-            return View();
+            // Fetch available crops from the database
+            ViewBag.Crops = await _context.Crops.ToListAsync();
+            return View(new GrowthHistory
+            {
+                DateRecorded = DateTime.Now // Automatically set today's date
+            });
         }
 
         // POST: GrowthHistory/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
+        public async Task<IActionResult> Create(GrowthHistory growthHistory)
         {
             if (ModelState.IsValid)
             {
@@ -86,39 +57,29 @@ namespace Lab2_G20.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewBag.CropTypes = new SelectList(_context.Crops
-                .Select(c => new { Id = c.Id, CropType = c.CropType })
-                .Distinct(), "Id", "CropType");
-
+            // Repopulate crops in case of an error
+            ViewBag.Crops = await _context.Crops.ToListAsync();
             return View(growthHistory);
         }
 
         // GET: GrowthHistory/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var growthHistory = await _context.GrowthHistory.FindAsync(id);
             if (growthHistory == null)
             {
                 return NotFound();
             }
 
-            ViewBag.CropTypes = new SelectList(_context.Crops
-                .Select(c => new { Id = c.Id, CropType = c.CropType })
-                .Distinct(), "Id", "CropType");
-
+            // Fetch available crops from the database
+            ViewBag.Crops = await _context.Crops.ToListAsync();
             return View(growthHistory);
         }
 
         // POST: GrowthHistory/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CropId,DateRecorded,GrowthStage,Notes")] GrowthHistory growthHistory)
+        public async Task<IActionResult> Edit(int id, GrowthHistory growthHistory)
         {
             if (id != growthHistory.Id)
             {
@@ -145,30 +106,19 @@ namespace Lab2_G20.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewBag.CropTypes = new SelectList(_context.Crops
-                .Select(c => new { Id = c.Id, CropType = c.CropType })
-                .Distinct(), "Id", "CropType");
-
+            // Repopulate crops in case of an error
+            ViewBag.Crops = await _context.Crops.ToListAsync();
             return View(growthHistory);
         }
 
         // GET: GrowthHistory/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var growthHistory = await _context.GrowthHistory
-                .Include(g => g.Crop)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var growthHistory = await _context.GrowthHistory.FindAsync(id);
             if (growthHistory == null)
             {
                 return NotFound();
             }
-
             return View(growthHistory);
         }
 
@@ -181,15 +131,54 @@ namespace Lab2_G20.Controllers
             if (growthHistory != null)
             {
                 _context.GrowthHistory.Remove(growthHistory);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool GrowthHistoryExists(int id)
         {
             return _context.GrowthHistory.Any(e => e.Id == id);
+        }
+
+        // Seed method to populate GrowthHistory with sample data
+        private async Task SeedData()
+        {
+            // Check if the table is empty
+            if (!_context.GrowthHistory.Any())
+            {
+                var crops = await _context.Crops.ToListAsync(); // Fetch available crops
+
+                // Sample data for growth history
+                var growthHistories = new List<GrowthHistory>
+                {
+                    new GrowthHistory
+                    {
+                        CropId = crops.First().Id, // Assuming there's at least one crop
+                        DateRecorded = DateTime.Now.AddDays(-10),
+                        GrowthStage = "Seedling",
+                        Notes = "Planted seeds."
+                    },
+                    new GrowthHistory
+                    {
+                        CropId = crops.First().Id,
+                        DateRecorded = DateTime.Now.AddDays(-5),
+                        GrowthStage = "Vegetative",
+                        Notes = "The plants are growing well."
+                    },
+                    new GrowthHistory
+                    {
+                        CropId = crops.First().Id,
+                        DateRecorded = DateTime.Now,
+                        GrowthStage = "Flowering",
+                        Notes = "Plants have started to flower."
+                    }
+                };
+
+                // Add the sample data to the context and save changes
+                await _context.GrowthHistory.AddRangeAsync(growthHistories);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
