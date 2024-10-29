@@ -8,7 +8,8 @@
 <div class="container mt-5">
     <h1>@ViewData["Title"]</h1>
 
-    <h2>Your Notifications</h2>
+    <br>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -28,7 +29,7 @@
             }
         </tbody>
     </table>
-
+    <br>
     <!-- Form to Add Personal Reminders -->
     <h2>Add Personal Reminder</h2>
     <form method="post" asp-action="AddPersonalReminder">
@@ -46,6 +47,8 @@
             <label for="ReminderNotes">Notes</label>
             <input type="text" class="form-control" id="ReminderNotes" name="ReminderNotes" />
         </div>
+
+        <br>
 
         <button type="submit" class="btn btn-primary">Set Reminder</button>
     </form>
