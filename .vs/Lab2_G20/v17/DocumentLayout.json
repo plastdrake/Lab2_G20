@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Lab2_G20\\",
+  "WorkspaceRootPath": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\growthhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\growthhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|e:\\lab2_g20\\lab2_g20\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|E:\\Lab2_G20\\lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|c:\\users\\agryt\\documents\\github\\lab2_g20\\lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01315BCC-1577-42E7-B7B7-42E1AEBC4D20}|Lab2_G20\\Lab2_G20.csproj|solutionrelative:lab2_g20\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,36 +30,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 221,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "RelativeToolTip": "Lab2_G20\\Views\\GrowthHistory\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T11:38:38.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Lab2_G20\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAB3AAAA",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T11:32:56.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Lab2_G20\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,24 +72,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Program.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Program.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Program.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Program.cs",
               "RelativeToolTip": "Lab2_G20\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T11:08:15.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T11:08:15.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Lab2_G20\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\agryt\\Documents\\GitHub\\Lab2_G20\\Lab2_G20\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Lab2_G20\\Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
