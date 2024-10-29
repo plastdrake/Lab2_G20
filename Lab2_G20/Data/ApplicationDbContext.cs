@@ -1,10 +1,13 @@
 ﻿using Lab2_G20.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.IO;
 
 namespace Lab2_G20.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -23,7 +26,7 @@ namespace Lab2_G20.Data
                 var projectPath = AppDomain.CurrentDomain.BaseDirectory;
                 var databasePath = Path.Combine(projectPath, "Lab2_G20.db");
 
-                optionsBuilder.UseSqlite($"Data Source={databasePath};"); // Use SQLite
+                optionsBuilder.UseSqlite($"Data Source={databasePath};");
             }
         }
 
@@ -31,7 +34,7 @@ namespace Lab2_G20.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Optional: Configure models
+            // Additional configurations if needed
         }
     }
 }

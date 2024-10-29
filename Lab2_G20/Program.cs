@@ -1,7 +1,8 @@
 using Lab2_G20.Data;
-using Lab2_G20.Controllers; // Add this line for NotificationsController
+using Lab2_G20.Controllers; // Include for NotificationsController
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,15 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<WeatherService>(); // Register WeatherService
 
 // Register NotificationsController for dependency injection
-builder.Services.AddScoped<NotificationsController>(); // Add this line
+builder.Services.AddScoped<NotificationsController>();
+
+// Add a global authorization policy
+builder.Services.AddAuthorization(options =>
+{
+    options.FallbackPolicy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+});
 
 var app = builder.Build();
 
@@ -32,7 +41,6 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -41,6 +49,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // Ensure authentication is added
 app.UseAuthorization();
 
 app.MapControllerRoute(
